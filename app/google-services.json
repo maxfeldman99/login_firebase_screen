@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "221869383126-5t23dchvb2a475n6451vav7aja90rjrq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maxfeldman.login_firebase_screen",
+            "certificate_hash": "50f258f4f69c66a0be6336955316406620f5286a"
+          }
+        },
+        {
           "client_id": "221869383126-8gfmgkd2phqj7lfmocvtdqaere993ldv.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221869383126-8gfmgkd2phqj7lfmocvtdqaere993ldv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

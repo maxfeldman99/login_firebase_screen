@@ -13,7 +13,7 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Sign Up"
+    android:text="Registration"
     android:textStyle="bold"
     android:textSize="30sp"
     android:gravity="center_horizontal"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="already registered? sign in here"
+            android:text="already registered? log in here"
             android:textStyle="bold"
             android:textSize="17sp"
             android:gravity="center_horizontal"
@@ -60,13 +60,22 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sign in"
+            android:text="log in"
             android:layout_gravity="center"
             android:layout_margin="15dp"
-            android:id="@+id/sign_btn"
+            android:id="@+id/log_in_btn"
 
             />
     </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
 
 
 
