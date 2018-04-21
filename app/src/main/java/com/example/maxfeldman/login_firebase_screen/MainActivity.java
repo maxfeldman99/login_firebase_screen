@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button log_in_btn;
     TextView sign_tv;
     ProgressBar progressBar;
-    private ProgressDialog progressDialog;
+
     private FirebaseAuth mAuth;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +43,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         email_et = findViewById(R.id.email_et);
         password_et = findViewById(R.id.password_et);
+        progressBar = findViewById(R.id.progress_bar);
+
         register_btn = findViewById(R.id.register_btn);
         sign_tv = findViewById(R.id.sign_tv);
         log_in_btn = findViewById(R.id.log_in_btn);
-        progressBar = findViewById(R.id.progress_bar);
+
 
         sign_tv.setOnClickListener(this);////
         register_btn.setOnClickListener(this);
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog = new ProgressDialog(this);
 
         mAuth = FirebaseAuth.getInstance();
+
 
 
     }
@@ -90,6 +95,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()){
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(MainActivity.this, "user registered successful", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // this will clear our activities , otherwise we come back to our sign up activity on BackPressed button
+                    startActivity(intent);
+
                 }
                 else{
                    if(task.getException() instanceof FirebaseAuthUserCollisionException){
